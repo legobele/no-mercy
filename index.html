@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NO-MERCY — brutalist design system</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<style>
+  body { margin: 0; background: var(--nm-paper); color: var(--nm-ink); font-family: var(--font-body); }
+  .demo-wrap { max-width: 1200px; margin: 0 auto; }
+  .demo-note { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--nm-gray); margin: 0 0 1.5rem; }
+  .demo-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .demo-stack { display: grid; gap: 2.5rem; }
+</style>
+</head>
+<body>
+
+<nav class="nm-nav">
+  <a class="nm-nav-brand" href="#">No-Mercy<sup style="font-size:.6em">®</sup></a>
+  <ul class="nm-nav-links">
+    <li><a href="#type">Type</a></li>
+    <li><a href="#components">Components</a></li>
+    <li><a href="#data">Data</a></li>
+  </ul>
+  <span class="nm-sticker">v1.0</span>
+</nav>
+
+<header class="nm-hero">
+  <div class="demo-wrap">
+    <div class="nm-hero-meta">
+      <span class="nm-label">Brutalist design system</span>
+      <span class="nm-label">Harsh grids / oversized type</span>
+      <span class="nm-label nm-blink">● No mercy</span>
+    </div>
+    <h1 class="nm-display-1">No<br>Mercy<span style="color:var(--nm-accent)">.</span></h1>
+    <p class="nm-body" style="margin-top:2rem">A design system for people who think border-radius is a moral failing. Three colors, two borders, one accent used like a weapon. Everything is uppercase because lowercase is a whisper.</p>
+    <div class="demo-row" style="margin-top:2rem">
+      <a class="nm-btn" href="#components">See components</a>
+      <a class="nm-btn nm-btn-ghost" href="#type">Read the doctrine</a>
+    </div>
+  </div>
+</header>
+
+<div class="nm-marquee" aria-hidden="true">
+  <div class="nm-marquee-track">
+    <span>No border-radius</span><span>✕</span><span>Hard shadows only</span><span>✕</span><span>Uppercase everything</span><span>✕</span><span>Grids are visible</span><span>✕</span><span>No border-radius</span><span>✕</span><span>Hard shadows only</span><span>✕</span><span>Uppercase everything</span><span>✕</span><span>Grids are visible</span><span>✕</span>
+  </div>
+</div>
+
+<section class="nm-section" id="type">
+  <div class="demo-wrap demo-stack">
+    <div class="nm-section-head">
+      <h2 class="nm-display-2">Type</h2>
+      <span class="nm-label">01 / The doctrine</span>
+    </div>
+    <p class="demo-note">display · Anton · always uppercase · line-height 0.85</p>
+    <h3 class="nm-display-2">Oversized<br><span class="nm-outline-text">Or nothing</span></h3>
+    <p class="demo-note">body · Archivo · max 62ch</p>
+    <p class="nm-body">Body copy stays quiet so the headlines can scream. This is the entire typographic philosophy: one voice shouts, the other files paperwork. Mono labels handle the paperwork — tracked out, uppercase, unmissable.</p>
+    <p class="demo-note">mono · Space Mono · labels, buttons, data</p>
+    <div class="demo-row">
+      <span class="nm-label">Fig. 01 — restraint</span>
+      <span class="nm-label-accent">Fig. 02 — violence</span>
+      <span class="nm-sticker">Fig. 03 — sticker</span>
+    </div>
+  </div>
+</section>
+
+<div class="nm-marquee nm-marquee-accent" aria-hidden="true">
+  <div class="nm-marquee-track" style="animation-direction: reverse">
+    <span>Buttons move when pressed</span><span>✕</span><span>Cards turn orange on hover</span><span>✕</span><span>Tables have opinions</span><span>✕</span><span>Buttons move when pressed</span><span>✕</span><span>Cards turn orange on hover</span><span>✕</span><span>Tables have opinions</span><span>✕</span>
+  </div>
+</div>
+
+<section class="nm-section" id="components">
+  <div class="demo-wrap demo-stack">
+    <div class="nm-section-head">
+      <h2 class="nm-display-2">Components</h2>
+      <span class="nm-label">02 / The arsenal</span>
+    </div>
+
+    <p class="demo-note">buttons · press them and they move</p>
+    <div class="demo-row">
+      <a class="nm-btn" href="#">Primary</a>
+      <a class="nm-btn nm-btn-ghost" href="#">Ghost</a>
+      <a class="nm-btn nm-btn-ink" href="#">Ink</a>
+    </div>
+
+    <p class="demo-note">cards · hover turns them orange</p>
+    <div class="nm-grid">
+      <article class="nm-card">
+        <span class="nm-card-index">/ 001</span>
+        <h3 class="nm-card-title">Hard shadows</h3>
+        <p class="nm-card-desc">Zero blur. A shadow should look like it was cut from construction paper, not rendered by a GPU.</p>
+        <span class="nm-card-tag">Doctrine</span>
+      </article>
+      <article class="nm-card">
+        <span class="nm-card-index">/ 002</span>
+        <h3 class="nm-card-title">Visible grids</h3>
+        <p class="nm-card-desc">The grid is not a guide. It is the design. Borders everywhere, gutters nowhere to hide.</p>
+        <span class="nm-card-tag">Layout</span>
+      </article>
+      <article class="nm-card">
+        <span class="nm-card-index">/ 003</span>
+        <h3 class="nm-card-title">One accent</h3>
+        <p class="nm-card-desc">Safety orange, used like a weapon. If everything is loud, nothing is. So only one thing is loud.</p>
+        <span class="nm-card-tag">Color</span>
+      </article>
+    </div>
+
+    <p class="demo-note">inputs · boxes too</p>
+    <div class="demo-row">
+      <input class="nm-input" placeholder="Type something aggressive" style="max-width:420px">
+    </div>
+  </div>
+</section>
+
+<section class="nm-section nm-invert" id="data">
+  <div class="demo-wrap demo-stack">
+    <div class="nm-section-head">
+      <h2 class="nm-display-2">Data</h2>
+      <span class="nm-label">03 / The black room</span>
+    </div>
+    <p class="demo-note">table · data with borders</p>
+    <table class="nm-table">
+      <thead>
+        <tr><th>Rule</th><th>Status</th><th>Exceptions</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Border-radius</td><td>Banned</td><td>None. Ever.</td></tr>
+        <tr><td>Accent color</td><td>#FF4D00</td><td>One per page view</td></tr>
+        <tr><td>Lowercase headlines</td><td>Banned</td><td>Whispers don't convert</td></tr>
+        <tr><td>Soft shadows</td><td>Banned</td><td>Blur is cowardice</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="nm-footer">
+  <div class="demo-wrap">
+    <p class="nm-footer-big">No<br>Mercy<span style="color:var(--nm-accent)">.</span></p>
+    <div class="nm-footer-row">
+      <span class="nm-label">© 2026 — built loud</span>
+      <span class="nm-label">Anton / Archivo / Space Mono</span>
+      <span class="nm-label nm-blink">● End of demo</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

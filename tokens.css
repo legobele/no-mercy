@@ -1,0 +1,67 @@
+/* ==========================================================================
+   NO-MERCY — tokens
+   A brutalist design system. Harsh grids, oversized type, no mercy.
+   Pair with components.css. Load the fonts first (see README).
+   ========================================================================== */
+
+:root {
+  /* ---- color: three colors and the truth ---- */
+  --nm-ink:    #0d0d0d;   /* near-black, everything structural */
+  --nm-paper:  #f2efe6;   /* bone, the default surface */
+  --nm-accent: #ff4d00;   /* safety orange, used like a weapon */
+  --nm-gray:   #8b8b85;   /* concrete gray, meta text only */
+  --nm-line:   #0d0d0d;   /* borders are always ink */
+
+  /* inverted section */
+  --nm-ink-bg:   #0d0d0d;
+  --nm-ink-text: #f2efe6;
+
+  /* ---- type ---- */
+  --font-display: "Anton", "Arial Black", "Impact", sans-serif;
+  --font-body:    "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    "Space Mono", "JetBrains Mono", ui-monospace, monospace;
+
+  /* ---- scale: display type is VIOLENT ---- */
+  --nm-display-1: clamp(4.5rem, 16vw, 13rem);
+  --nm-display-2: clamp(3rem, 9vw, 7rem);
+  --nm-display-3: clamp(2rem, 5vw, 3.5rem);
+  --nm-body: 1.0625rem;
+  --nm-small: 0.8125rem;
+
+  /* ---- the brutalist doctrine, as numbers ---- */
+  --nm-radius: 0;                       /* no rounded corners. ever. */
+  --nm-border: 2px solid var(--nm-line);
+  --nm-border-thick: 4px solid var(--nm-line);
+  --nm-shadow: 6px 6px 0 var(--nm-ink); /* hard shadow, zero blur */
+  --nm-shadow-sm: 3px 3px 0 var(--nm-ink);
+  --nm-shadow-accent: 6px 6px 0 var(--nm-accent);
+
+  /* ---- spacing: the grid is visible ---- */
+  --nm-gap: 1.5rem;
+  --nm-section-pad: clamp(3rem, 8vw, 7rem);
+
+  /* ---- motion: mechanical, not smooth ---- */
+  --nm-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --nm-speed: 180ms;
+  --nm-marquee-speed: 18s;
+}
+
+/* ---- base reset: the system assumes control ---- */
+.nm-reset, .nm-reset * {
+  border-radius: var(--nm-radius) !important;
+}
+
+::selection {
+  background: var(--nm-accent);
+  color: #0d0d0d;
+}
+
+:focus-visible {
+  outline: 4px solid var(--nm-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nm-marquee-track { animation: none !important; }
+  * { transition-duration: 0.01ms !important; }
+}
